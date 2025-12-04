@@ -5,6 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài tập & Lịch sử CSS</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffd6e8, #d6f0ff, #ffeccf);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+            color: #444;
+        }
+
+        @keyframes gradientMove {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 32px;
+            color: #ff7aa2;
+        }
+
+        .subtitle {
+            color: #7a8cff;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #ff8ecf;
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+
+        /* Sticker bay vòng vòng */
+        .sticker {
+            position: fixed;
+            width: 60px;
+            opacity: 0.8;
+            animation: fly 12s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fly {
+            0% { transform: translateY(120vh) rotate(0deg); }
+            50% { transform: translateY(40vh) rotate(180deg); }
+            100% { transform: translateY(-20vh) rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -24,7 +85,7 @@
             <p><strong>Sự giống nhau và tương thích của Style Sheet trong các phần mềm soạn thảo văn bản với CSS của trang web:</strong></p>
             <ul>
                 <li><strong>Cấu trúc và cú pháp:</strong> Cả Style Sheet và CSS đều tuân theo một quy tắc định dạng. Trong phần mềm soạn thảo văn bản, Style Sheet định nghĩa font chữ, kích thước, căn lề… được áp dụng cho đoạn văn; trong CSS, các thuộc tính cũng được viết theo dạng "tên thuộc tính: giá trị".</li>
-                <li><strong>Tính tái sử dụng:</strong> CSS cho phép định dạng một lần và áp dụng cho  nhiều phần tử HTML. Tương tự, Style Sheet trong Word hay LibreOffice cho phép áp dụng cùng một kiểu định dạng cho nhiều đoạn văn khác nhau.</li>
+                <li><strong>Tính tái sử dụng:</strong> CSS cho phép định dạng một lần và áp dụng cho nhiều phần tử HTML. Tương tự, Style Sheet trong Word hay LibreOffice cho phép áp dụng cùng một kiểu định dạng cho nhiều đoạn văn khác nhau.</li>
                 <li><strong>Khuôn mẫu định dạng:</strong> Cả hai đều cho phép tạo khuôn định dạng cho tiêu đề, đoạn văn, danh sách… giúp văn bản hoặc trang web có phong cách thống nhất.</li>
                 <li><strong>Kiểm soát phong cách:</strong> Cả CSS và Style Sheet đều cho phép tùy chỉnh màu sắc, font chữ, khoảng cách, độ đậm, đường viền… giúp người thiết kế chủ động tạo bố cục và thẩm mỹ mong muốn.</li>
             </ul>
@@ -52,5 +113,9 @@
         <p>CSS3 được phát triển theo từng module riêng biệt...</p>
         <p>W3C chịu trách nhiệm phát triển HTML và CSS: <a href="http://www.w3.org/">www.w3.org</a></p>
     </div>
+    <!-- Sticker bay -->
+    <img src="https://i.imgur.com/5cX1hEw.png" class="sticker" style="left:10%; animation-delay: 0s;">
+    <img src="https://i.imgur.com/5cX1hEw.png" class="sticker" style="left:40%; animation-delay: 3s; width:50px;">
+    <img src="https://i.imgur.com/5cX1hEw.png" class="sticker" style="left:70%; animation-delay: 6s; width:70px;">
 </body>
 </html>
