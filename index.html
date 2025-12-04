@@ -51,14 +51,7 @@
         }
         a:hover { text-decoration: underline; }
 
-        /* Sticker bay vòng vòng */
-        .sticker {
-            position: fixed;
-            width: 60px;
-            opacity: 0.8;
-            animation: fly 12s linear infinite;
-            pointer-events: none;
-        }
+        
 
         @keyframes fly {
             0% { transform: translateY(120vh) rotate(0deg); }
@@ -66,17 +59,33 @@
             100% { transform: translateY(-20vh) rotate(360deg); }
         }
     </style>
+    <style>
+        /* Hiệu ứng sticker bay */
+        .sticker {
+            position: fixed;
+            width: 60px;
+            opacity: 0.85;
+            pointer-events: none;
+            animation: fly 12s linear infinite;
+        }
+
+        @keyframes fly {
+            0% { transform: translateY(110vh) translateX(0) rotate(0deg); }
+            50% { transform: translateY(40vh) translateX(20px) rotate(180deg); }
+            100% { transform: translateY(-20vh) translateX(-20px) rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1 class="main-title">Luyện tập</h1>
         <div class="exercise-section">
-            <h2> Bài 1</h2>
-            <p><strong>Câu hỏi:</strong> “Ngôn ngữ định dạng CSS chính là ngôn ngữ HTML” là đúng hay sai?</p>
+            <h2>Khẳng định 1</h2>
+            <p><strong>Khẳng định:</strong> “Ngôn ngữ định dạng CSS chính là ngôn ngữ HTML” là đúng hay sai?</p>
             <p><strong>Trả lời:</strong> Sai. Ngôn ngữ định dạng CSS (Cascading Style Sheets) không phải là ngôn ngữ HTML (HyperText Markup Language). HTML được dùng để tạo cấu trúc nội dung bằng các thẻ, còn CSS dùng để điều chỉnh cách hiển thị các phần tử HTML như màu sắc, kích thước chữ, khoảng cách, bố cục… CSS là một ngôn ngữ độc lập và hoạt động cùng với HTML để tạo giao diện hoàn chỉnh.</p>
 
-            <h2> Bài 2</h2>
-            <p><strong>Câu hỏi:</strong> “Có thể chỉ cần thay đổi thông tin của tệp CSS sẽ làm thay đổi định dạng của nhiều trang web hoặc cả một website” đúng hay sai?</p>
+            <h2>Khẳng định 2</h2>
+            <p><strong>Khẳng định:</strong> “Có thể chỉ cần thay đổi thông tin của tệp CSS sẽ làm thay đổi định dạng của nhiều trang web hoặc cả một website” đúng hay sai?</p>
             <p><strong>Trả lời:</strong> Đúng. Khi nhiều trang web hoặc nhiều trang trong cùng một website cùng sử dụng một tệp CSS, việc thay đổi thuộc tính trong tệp CSS sẽ lập tức làm thay đổi giao diện của tất cả các trang đang liên kết đến tệp đó. Điều này cho phép việc chỉnh sửa giao diện trở nên nhanh chóng, thống nhất và không cần chỉnh từng trang.</p>
         </div>
 
@@ -113,9 +122,9 @@
         <p>CSS3 được phát triển theo từng module riêng biệt...</p>
         <p>W3C chịu trách nhiệm phát triển HTML và CSS: <a href="http://www.w3.org/">www.w3.org</a></p>
     </div>
-    <!-- Sticker bay -->
-    <img src="https://pin.it/2A7CG0s8G" class="sticker" style="left:10%; animation-delay: 0s;">
-    <img src="https://pin.it/7hWgzPLN4" class="sticker" style="left:40%; animation-delay: 3s; width:50px;">
-    <img src="https://pin.it/5oAHrczEB" class="sticker" style="left:70%; animation-delay: 6s; width:70px;">
+        <!-- Sticker bay -->
+    <img src="https://pin.it/5HsmvEu2q" class="sticker" style="left: 12%; animation-delay: 0s;">
+    <img src="https://pin.it/1pjE1VkcR" class="sticker" style="left: 45%; width:50px; animation-delay: 3s;">
+    <img src="https://pin.it/7EpG7zpw4" class="sticker" style="left: 75%; width:70px; animation-delay: 6s;">
 </body>
 </html>
